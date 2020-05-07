@@ -1,0 +1,66 @@
+#anime_test{
+    height: 100px;
+    width: 100px;
+    background-color: #F44336;
+    position: relative;
+    left: 0;
+    transition: 2.0s;
+    visibility:hidden;
+}
+#anime_test.active {
+    background-color: #2196F3;
+    left: calc(100% - 100px);
+}
+
+#anime_test.active2 {
+    background-color: #2196F3;
+    left: calc(100% - 100px);
+    visibility:visible;
+}
+
+body{
+    height: 1500px;
+    width: 1500px;
+}
+
+header{
+  height:15%;
+  background-image: url("./resorce/iamg1.png");
+  /*https://www.google.com/url?sa=i&url=https%3A%2F%2Fsozai-koyomi.com%2F2018%2F09%2F18%2Fp028%2F&psig=AOvVaw0-tfch4r-bVg0goVOG1iaY&ust=1588555849289000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDDk_DFlukCFQAAAAAdAAAAABAE*/
+}
+
+ul{
+  border: solid 3px;
+}
+li{
+  font-size: 24px;
+
+}
+.content{
+	font-size: 24px;
+  width: 200px;
+  background-color: aqua;
+}
+td,tr{
+  border: solid 5px;
+  border-collapse: collapse;
+}
+#tablehead{
+  background-color: blue;
+}
+.section {
+  scroll-snap-align: start;
+  height: 100%;
+}
+main{
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+
+#startbutton{
+    font-size: 24px;
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+}
