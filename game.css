@@ -51,3 +51,11 @@ header{
 	margin-left: 400px;
 	margin-top: 50px;
 }
+#gamestatus{
+	width: 100px;
+	position: absolute;
+	margin-top: 400px;
+	margin-left: 50px;
+	font-size: 24px;
+	border: double 4px;
+}

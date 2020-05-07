@@ -227,12 +227,15 @@ var finflg = 0;
 var stopbtn = 0;
 
 var startbtn;
+var status;
 
+var startflg = false;
 var id;
 window.onload = inialize;
 function inialize(){
 	startbtn = document.getElementById("startbtn");
 	stopbtn = document.getElementById("stopbtn");
+
 	startbtn.onclick = start;
 	stopbtn.onclick = stop;
 
@@ -334,8 +337,7 @@ function dropflg(){
 function isFinalJuge(){
 	var finflg = false;
 	if(board[key_x] != 0 && key_y == 0){
-		finflg = 1;
-		clearInterval(id);
+		stop();
 		finflg = true;
 	}
 	return finflg;
@@ -440,18 +442,28 @@ function Block(){
 }
 
 function start(){
-		id = setInterval(Loop, 1000);
+	if(!startflg){
+		console.log(status);
+		document.getElementById("gamestatus").innerHTML = "開始";
+		id = setInterval(Loop, 600);
 		mino_type_reset();
 		resetStatus();
 		resetBoard();
 		nextMinoDraw();
 		update();
 		draw();
+		startflg = true;
+	}
+
 
 }
 
 function stop(){
-	clearInterval(id);
+	if(startflg){
+		document.getElementById("gamestatus").innerHTML = "待機中";
+		clearInterval(id);
+		startflg = false;
+	}
 }
 
 function resetStatus(){
