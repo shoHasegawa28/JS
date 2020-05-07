@@ -1,0 +1,32 @@
+body{
+
+}
+.block{
+	width: 25px;
+	height: 25px;
+	background-color: grey;
+	position: absolute;
+	border: solid 1px;
+}
+#bord{
+	width: 300px;
+	height: 500px;
+	top: 100px;
+	left: 100px;
+	position: absolute;
+}
+#startbtn{
+	background-color: grey;
+	width: 100px;
+	height: 50px;
+	display: block;
+}
+#stopbtn{
+	background-color: grey;
+	width: 100px;
+	height: 50px;
+	display: block;
+}
+#base{
+	float: left;
+}
