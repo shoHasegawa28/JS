@@ -2,7 +2,7 @@
 $(function(){
 	$("#sortable").sortable({
 		update: function(event,ui){
-			$('#sortable').children('tr').each(function(index){
+			$('#sortable tr').each(function(index){
 				$(this).children('td').children('input').val(index);
 			})
 		}
