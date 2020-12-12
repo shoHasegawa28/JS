@@ -1,0 +1,20 @@
+table,tbody,thead,th,td{
+	border: solid 1px;
+}
+table{
+	width: 500px;
+}
+
+thead{
+	width: 500px;
+	display:block;
+}
+
+tbody{
+	width: 517px;
+	height: 200px;
+	display:block;
+	overflow-y: scroll;
+}
+
+
