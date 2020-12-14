@@ -90,3 +90,22 @@ function CheckRange(targetIdx,startIdx,endIdx){
 	}
 	return true;
 }
+/**
+ * Classから指定した要素を取得する 
+ * @param {*} $class 対象のclass 
+ * @param {*} idx 添え字
+ */
+function GetSelectClassDom($class,idx){
+	// Nullチェック
+	if(!CehckNullElement($class)){
+		return false;
+	}
+
+	// 添え字が有効値がどうかの判定
+	if(!CheckRange(idx,0,$class.length)){
+		return false
+	}
+
+	// 指定した要素を戻どす
+	return $($class[idx]);
+}

@@ -2,7 +2,7 @@
  * メイン処理
  */
 $(function(){
-	TestLike();
+	TestGetSelectClassDom();
 });
 
 /**
@@ -72,4 +72,22 @@ function TestLikeMathTest(targetStr,searchStr,notMatchCase,type){
 	console.log("不一致パターン");
 	console.log(targetStr + ":" + notMatchCase);
 	console.log(Like(targetStr,notMatchCase,type));
+}
+
+/**
+ * classから指定した添え字の要素を取得に関するテスト
+ */
+function TestGetSelectClassDom(){
+    // クラスが存在しない場合
+    console.log("クラスが存在しない場合");
+    console.log(GetSelectClassDom($(".none"),1));
+
+    // 添え字の値が無効値の場合
+    console.log("添え字の値が無効の場合");
+    console.log(GetSelectClassDom($(".classTest"),-1));
+    console.log(GetSelectClassDom($(".classTest"),3));
+
+    // 正常時の場合
+    console.log("正常時の場合");
+    console.log(GetSelectClassDom($(".classTest"),0).text());
 }
