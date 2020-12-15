@@ -109,3 +109,19 @@ function GetSelectClassDom($class,idx){
 	// 指定した要素を戻どす
 	return $($class[idx]);
 }
+
+/**
+ * 文字列のtrueをbool型で判定する処理 
+ * @param {string} text 文字列のbool
+ * @returns (True:text = "true")の場合, False (text != "true")の場合 
+ */
+function ToChangeTextBool(text){
+
+	// 引数がnullではないかどうかの判定
+	if(!CehckNullElement(text)){
+		return false;
+	}
+
+	// 文字列を大文字に変換後Trueかどうかの判定を行う
+	return (String(text).toUpperCase() == 'TRUE');
+}

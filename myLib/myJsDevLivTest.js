@@ -2,7 +2,7 @@
  * メイン処理
  */
 $(function(){
-	TestGetSelectClassDom();
+	TestToChangeTextBool();
 });
 
 /**
@@ -90,4 +90,30 @@ function TestGetSelectClassDom(){
     // 正常時の場合
     console.log("正常時の場合");
     console.log(GetSelectClassDom($(".classTest"),0).text());
+}
+
+/**
+ * 文字列からboolに変換する処理のテストケース
+ */
+function TestToChangeTextBool(){
+	// 引数がnullの場合
+	console.log("引数がnullの場合");
+	console.log(ToChangeTextBool(null));
+
+	// 引数が文字列以外の場合
+	console.log("引数が文字列以外の場合");
+	console.log("1:" + ToChangeTextBool(1));
+	console.log("true" + ToChangeTextBool(true));
+
+	// 引数が文字列のTrueの場合
+	console.log("引数が文字Trueの場合");
+	console.log("'true'" + ToChangeTextBool('true'));
+
+	// 引数が文字列のTRUEの場合
+	console.log("引数が文字列のTRUEの場合");
+	console.log("'TRUE'" + ToChangeTextBool('TRUE'));
+
+	// 引数が文字列のFalseの場合
+	console.log("引数が文字列のFalseの場合");
+	console.log("'FALSE'" + ToChangeTextBool('FALSE'));
 }
